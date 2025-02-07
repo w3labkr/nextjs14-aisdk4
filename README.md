@@ -1,6 +1,48 @@
 # nextjs14-aisdk4-langchain
 
-This is a dashboard starter template.
+This is a dashboard starter template for the [Next.js](https://nextjs.org) 14 app router based on [AI SDK](https://sdk.vercel.ai) v4.
+
+## Screenshots
+
+![screenshot](./screenshot.png)
+
+## Denpendencies
+
+- Next.js 14
+- AI SDK v4
+- Tailwindcss
+- Shadcn
+
+## Documents
+
+- [DEPENDENCIES](./docs/DEPENDENCIES.md)
+- [GIT](./docs/GIT.md)
+
+## Getting Started
+
+Clone the repository to the current directory.
+
+```shell
+git clone https://github.com/w3labkr/nextjs14-aisdk4-langchain .
+```
+
+Install all modules listed as dependencies.
+
+```shell
+npm install
+```
+
+Copy of the `.env.example` if the `.env` doesn't exist.
+
+```shell
+cp .env.example .env
+```
+
+Start the development server.
+
+```shell
+npm run dev
+```
 
 ## License
 

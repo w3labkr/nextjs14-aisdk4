@@ -1,5 +1,6 @@
 {
   "name": "nextjs14-aisdk4-langchain",
+  "description": "This is a dashboard starter template for the NextJS 14 app router based on AI SDK by Vercel v4.",
   "version": "0.1.0",
   "private": true,
   "scripts": {
