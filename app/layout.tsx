@@ -1,5 +1,9 @@
+import * as React from 'react'
 import type { Metadata } from 'next'
 import './globals.css'
+
+import { Toaster } from '@/components/ui/sonner'
+import { TailwindIndicator } from '@/components/tailwind-indicator'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -13,7 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Toaster richColors closeButton />
+        <TailwindIndicator />
+      </body>
     </html>
   )
 }

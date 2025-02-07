@@ -62,6 +62,8 @@ npm install @tanstack/react-table
 Add the Toaster component. Edit `app/layout.tsx`:
 
 ```javascript
+import { Toaster } from '@/components/ui/sonner'
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -76,6 +78,20 @@ export default function RootLayout({
     </html>
   );
 }
+```
+
+## AI SDK
+
+The AI SDK is the TypeScript toolkit designed to help developers build AI-powered applications and agents with React, Next.js, Vue, Svelte, Node.js, and more.
+
+```shell
+npm install ai @ai-sdk/openai zod
+```
+
+Beautifully designed chatbot components based on shadcn/ui
+
+```shell
+npx shadcn@latest add https://shadcn-chatbot-kit.vercel.app/r/chat.json
 ```
 
 ## ESLint

@@ -1,4 +1,4 @@
-# nextjs14-openai-langchain
+# nextjs14-ai4-langchain
 
 This is a dashboard starter template.
 
