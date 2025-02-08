@@ -29,7 +29,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from '@/components/ui/sidebar'
+} from '@/components/custom-ui/sidebar'
 
 const data = [
   [

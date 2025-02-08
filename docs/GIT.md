@@ -14,7 +14,6 @@ $ git remote -v
 > origin git@github.com:OWNER/REPOSITORY.git (push)
 
 $ git remote set-url origin https://github.com/OWNER/REPOSITORY.git
-$ git remote set-url origin git@github.com:w3labkr/nextjs14-aisdk4-langchain.git
 
 $ git remote -v
 > origin https://github.com/OWNER/REPOSITORY.git (fetch)

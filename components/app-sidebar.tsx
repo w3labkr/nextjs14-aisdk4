@@ -4,7 +4,7 @@ import * as React from 'react'
 import { Home, SquarePen } from 'lucide-react'
 
 import { NavMain } from '@/components/nav-main'
-import { NavArchive } from '@/components/nav-archive'
+import { NavChatHistory } from '@/components/nav-chat-history'
 import { NavPlan } from '@/components/nav-plan'
 import {
   Sidebar,
@@ -15,7 +15,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarRail,
-} from '@/components/ui/sidebar'
+} from '@/components/custom-ui/sidebar'
 import Link from 'next/link'
 
 // This is sample data.
@@ -55,7 +55,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavArchive archives={data.archives} />
+        <NavChatHistory archives={data.archives} />
       </SidebarContent>
       <SidebarFooter>
         <NavPlan />

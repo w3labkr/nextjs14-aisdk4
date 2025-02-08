@@ -2,7 +2,7 @@
 
 import { type LucideIcon } from 'lucide-react'
 
-import { SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar'
+import { SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/custom-ui/sidebar'
 
 export function NavMain({
   items,

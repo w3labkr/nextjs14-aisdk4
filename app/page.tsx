@@ -2,24 +2,8 @@ import * as React from 'react'
 
 import { AppSidebar } from '@/components/app-sidebar'
 import { NavUser } from '@/components/nav-user'
-import { SidebarInset, SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar'
-
-import { type UseChatOptions } from 'ai/react'
+import { SidebarInset, SidebarProvider, SidebarTrigger } from '@/components/custom-ui/sidebar'
 import { ChatDemo } from '@/components/chat-demo'
-
-const initialMessages: UseChatOptions['initialMessages'] = [
-  {
-    id: '1',
-    role: 'user',
-    content: 'What is shadcn-chatbot-kit?',
-  },
-  {
-    id: '2',
-    role: 'assistant',
-    content:
-      'shadcn-chatbot-kit is a toolkit to easily build chatbot UIs. It is a set of beautifully designed components based on shadcn/ui. It is fully customizable and owned by you.',
-  },
-]
 
 export default function Home() {
   return (
@@ -36,7 +20,7 @@ export default function Home() {
         </header>
         <div className="flex min-h-[90vh] w-full">
           <div className="flex w-full p-10">
-            <ChatDemo initialMessages={initialMessages} />
+            <ChatDemo />
           </div>
         </div>
       </SidebarInset>

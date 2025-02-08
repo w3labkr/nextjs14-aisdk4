@@ -17,9 +17,9 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from '@/components/ui/sidebar'
+} from '@/components/custom-ui/sidebar'
 
-export function NavArchive({
+export function NavChatHistory({
   archives,
 }: {
   archives: {
