@@ -1,7 +1,7 @@
 'use client'
 
 import * as React from 'react'
-import { Home, SquarePen } from 'lucide-react'
+import { Bot, MessageCircleMore, SquarePen } from 'lucide-react'
 
 import { NavMain } from '@/components/nav-main'
 import { NavChatHistory } from '@/components/nav-chat-history'
@@ -20,8 +20,12 @@ import Link from 'next/link'
 
 // This is sample data.
 const data = {
-  navMain: [{ title: 'Home', url: '#', icon: Home, isActive: true }],
-  archives: [
+  navMain: [
+    { title: 'OpenAI', url: '/openai', icon: MessageCircleMore, isActive: false },
+    { title: 'Groq', url: '/groq', icon: MessageCircleMore, isActive: false },
+    // { title: 'Assistant', url: '#', icon: Bot, isActive: false },
+  ],
+  chatHistory: [
     { name: 'Project Management & Task Tracking', url: '#', emoji: '📊' },
     { name: 'Family Recipe Collection & Meal Planning', url: '#', emoji: '🍳' },
     { name: 'Fitness Tracker & Workout Routines', url: '#', emoji: '💪' },
@@ -38,7 +42,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               <SidebarMenuButton size="lg" asChild>
                 <Link href="#">
                   <div className="grid flex-1 text-left text-sm leading-tight">
-                    <span className="truncate font-semibold">Chatbot</span>
+                    <span className="truncate font-semibold">AI SDK</span>
                   </div>
                 </Link>
               </SidebarMenuButton>
@@ -55,7 +59,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavChatHistory archives={data.archives} />
+        <NavChatHistory data={data.chatHistory} />
       </SidebarContent>
       <SidebarFooter>
         <NavPlan />

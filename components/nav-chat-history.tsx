@@ -20,9 +20,9 @@ import {
 } from '@/components/custom-ui/sidebar'
 
 export function NavChatHistory({
-  archives,
+  data,
 }: {
-  archives: {
+  data: {
     name: string
     url: string
     emoji: string
@@ -34,7 +34,7 @@ export function NavChatHistory({
     <SidebarGroup className="group-data-[collapsible=icon]:hidden">
       <SidebarGroupLabel>Yesterday</SidebarGroupLabel>
       <SidebarMenu>
-        {archives.map((item) => (
+        {data.map((item) => (
           <SidebarMenuItem key={item.name}>
             <SidebarMenuButton asChild>
               <a href={item.url} title={item.name}>

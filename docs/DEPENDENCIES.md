@@ -88,6 +88,12 @@ The AI SDK is the TypeScript toolkit designed to help developers build AI-powere
 npm install ai @ai-sdk/openai zod
 ```
 
+The Groq provider for the AI SDK contains language model support for the Groq chat and completion APIs and embedding model support for the Groq embeddings API.
+
+```shell
+npm install @ai-sdk/groq
+```
+
 Beautifully designed chatbot components based on shadcn/ui
 
 ```shell

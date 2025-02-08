@@ -7,6 +7,7 @@ declare global {
       NEXT_PUBLIC_APP_URL: string
 
       OPENAI_API_KEY: string
+      GROQ_API_KEY: string
 
       [key: string]: string | undefined
     }

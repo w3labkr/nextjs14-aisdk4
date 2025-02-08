@@ -12,6 +12,7 @@ export async function POST(req: Request) {
   const result = streamText({
     model: openai('gpt-4o-mini'),
     temperature: 0,
+    system: 'You are a helpful assistant.',
     messages,
   })
 
