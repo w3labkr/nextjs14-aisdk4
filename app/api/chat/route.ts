@@ -1,5 +1,7 @@
 import { openai } from '@ai-sdk/openai'
-import { streamText, type Message } from 'ai'
+import { convertToCoreMessages, streamText, type Message } from 'ai'
+
+const SYSTEM_INSTRUCTIONS = `You are a helpful assistant.`
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30
@@ -12,8 +14,8 @@ export async function POST(req: Request) {
   const result = streamText({
     model: openai('gpt-4o-mini'),
     temperature: 0,
-    system: 'You are a helpful assistant.',
-    messages,
+    system: SYSTEM_INSTRUCTIONS,
+    messages: convertToCoreMessages(messages),
   })
 
   return result.toDataStreamResponse()

@@ -3,4 +3,5 @@
 /dist/
 /out/
 /components/ui/
-/components/chatbot-kit/
+/components/custom-ui/
+/components/assistant-ui/

@@ -82,6 +82,12 @@ export default function RootLayout({
 
 ## AI SDK
 
+Official JavaScript / TypeScript library for the OpenAI API
+
+```shell
+npm install openai
+```
+
 The AI SDK is the TypeScript toolkit designed to help developers build AI-powered applications and agents with React, Next.js, Vue, Svelte, Node.js, and more.
 
 ```shell
@@ -94,10 +100,23 @@ The Groq provider for the AI SDK contains language model support for the Groq ch
 npm install @ai-sdk/groq
 ```
 
-Beautifully designed chatbot components based on shadcn/ui
+## assistant-ui
+
+Typescript/React library for AI Chat
 
 ```shell
-npx shadcn@latest add https://shadcn-chatbot-kit.vercel.app/r/chat.json
+npx shadcn@latest add "https://r.assistant-ui.com/thread"
+npx shadcn@latest add "https://r.assistant-ui.com/thread-list"
+npx shadcn@latest add "https://r.assistant-ui.com/attachment"
+npx shadcn@latest add "https://r.assistant-ui.com/assistant-modal"
+npx shadcn@latest add "https://r.assistant-ui.com/assistant-sidebar"
+npx shadcn@latest add "https://r.assistant-ui.com/markdown-text"
+```
+
+Integration with the Vercel AI SDK UI's useAssistant hook.
+
+```shell
+npm install @assistant-ui/react @assistant-ui/react-ai-sdk ai openai
 ```
 
 ## ESLint

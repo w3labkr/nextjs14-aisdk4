@@ -1,70 +1,66 @@
 'use client'
 
 import * as React from 'react'
-import { Bot, MessageCircleMore, SquarePen } from 'lucide-react'
 
+import { Bot, MessageCircleMore } from 'lucide-react'
 import { NavMain } from '@/components/nav-main'
-import { NavChatHistory } from '@/components/nav-chat-history'
 import { NavPlan } from '@/components/nav-plan'
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
   SidebarRail,
+  SidebarInset,
+  SidebarProvider,
+  SidebarTrigger,
 } from '@/components/custom-ui/sidebar'
-import Link from 'next/link'
+import { NavUser } from '@/components/nav-user'
+import { NavLogo } from '@/components/nav-logo'
+import { Thread } from '@/components/assistant-ui/thread'
+import { NavChatHistory } from '@/components/nav-chat-history'
+import { NewChat } from '@/components/new-chat'
 
 // This is sample data.
 const data = {
   navMain: [
-    { title: 'OpenAI', url: '/openai', icon: MessageCircleMore, isActive: false },
+    { title: 'OpenAI', url: '/chat', icon: MessageCircleMore, isActive: false },
     { title: 'Groq', url: '/groq', icon: MessageCircleMore, isActive: false },
-    // { title: 'Assistant', url: '#', icon: Bot, isActive: false },
-  ],
-  chatHistory: [
-    { name: 'Project Management & Task Tracking', url: '#', emoji: '📊' },
-    { name: 'Family Recipe Collection & Meal Planning', url: '#', emoji: '🍳' },
-    { name: 'Fitness Tracker & Workout Routines', url: '#', emoji: '💪' },
+    { title: 'Assistant', url: '/assistant', icon: Bot, isActive: false },
   ],
 }
 
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+export function AppSidebar({ children }: { children?: React.ReactNode }) {
   return (
-    <Sidebar className="border-r-0" {...props}>
-      <SidebarHeader>
-        <SidebarMenu>
-          <div className="flex items-center justify-between pr-2">
-            <SidebarMenuItem>
-              <SidebarMenuButton size="lg" asChild>
-                <Link href="#">
-                  <div className="grid flex-1 text-left text-sm leading-tight">
-                    <span className="truncate font-semibold">AI SDK</span>
-                  </div>
-                </Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <Link href="#">
-                  <SquarePen className="size-5" />
-                </Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
+    <SidebarProvider>
+      <Sidebar>
+        <SidebarHeader className="flex h-16 flex-row items-center justify-between px-2 py-0">
+          <NavLogo />
+          <NewChat />
+        </SidebarHeader>
+        <SidebarContent className="px-2">
+          <NavMain items={data.navMain} />
+          <NavChatHistory />
+        </SidebarContent>
+        <SidebarFooter className="px-2">
+          <NavPlan />
+        </SidebarFooter>
+        <SidebarRail />
+      </Sidebar>
+      <SidebarInset>
+        <header className="sticky top-0 z-10 flex h-16 shrink-0 items-center gap-2 border-b bg-background px-4">
+          <div className="flex flex-1 items-center gap-2">
+            <SidebarTrigger />
+            {children}
           </div>
-        </SidebarMenu>
-      </SidebarHeader>
-      <SidebarContent>
-        <NavMain items={data.navMain} />
-        <NavChatHistory data={data.chatHistory} />
-      </SidebarContent>
-      <SidebarFooter>
-        <NavPlan />
-      </SidebarFooter>
-      <SidebarRail />
-    </Sidebar>
+          <div className="ml-auto px-2">
+            <NavUser />
+          </div>
+        </header>
+        <div className="h-full w-full p-10">
+          <Thread />
+        </div>
+      </SidebarInset>
+    </SidebarProvider>
   )
 }
