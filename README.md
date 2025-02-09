@@ -1,6 +1,6 @@
-# nextjs14-aisdk4-langchain
+# nextjs14-aisdk4-chatbot
 
-This is a dashboard starter template for the [Next.js](https://nextjs.org) 14 app router based on [AI SDK](https://sdk.vercel.ai) v4.
+This is a chatbot starter template for the [Next.js](https://nextjs.org) 14 based on [AI SDK](https://sdk.vercel.ai) v4.
 
 ## Screenshots
 
@@ -12,6 +12,7 @@ This is a dashboard starter template for the [Next.js](https://nextjs.org) 14 ap
 - AI SDK v4
 - Tailwindcss
 - Shadcn
+- assistant-ui
 
 ## Documents
 
@@ -23,7 +24,7 @@ This is a dashboard starter template for the [Next.js](https://nextjs.org) 14 ap
 Clone the repository to the current directory.
 
 ```shell
-git clone https://github.com/w3labkr/nextjs14-aisdk4-langchain .
+git clone https://github.com/w3labkr/nextjs14-aisdk4-chatbot .
 ```
 
 Install all modules listed as dependencies.
