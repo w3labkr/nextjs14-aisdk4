@@ -4,6 +4,7 @@ import './globals.css'
 
 import { Toaster } from '@/components/ui/sonner'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
+import { ChatbotModal } from '@/components/chatbot-modal'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,6 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {children}
+        <ChatbotModal />
         <Toaster richColors closeButton />
         <TailwindIndicator />
       </body>
