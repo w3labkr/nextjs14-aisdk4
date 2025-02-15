@@ -1,5 +1,17 @@
 # DEPENDENCIES
 
+## Table of Contents
+
+- [DEPENDENCIES](#dependencies)
+  - [Table of Contents](#table-of-contents)
+  - [Next.js](#nextjs)
+  - [shadcn](#shadcn)
+  - [assistant-ui](#assistant-ui)
+  - [Tailwindcss](#tailwindcss)
+  - [AI SDK](#ai-sdk)
+  - [ESLint](#eslint)
+  - [Prettier](#prettier)
+
 ## Next.js
 
 Automatic Installation
@@ -7,33 +19,19 @@ Automatic Installation
 ```shell
 $ npx create-next-app@14.2.20 .
 
-✔ Would you like to use TypeScript? … Yes
-✔ Would you like to use ESLint? … Yes
-✔ Would you like to use Tailwind CSS? … Yes
-✔ Would you like to use `src/` directory? … No
-✔ Would you like to use App Router? (recommended) … Yes
-✔ Would you like to customize the default import alias (@/*)? … No
+✔ Would you like to use TypeScript? Yes
+✔ Would you like to use ESLint? Yes
+✔ Would you like to use Tailwind CSS? Yes
+✔ Would you like to use `src/` directory? No
+✔ Would you like to use App Router? (recommended) Yes
+✔ Would you like to customize the default import alias (@/*)? No
+
+$ node -v > .nvmrc
 ```
 
-```shell
-node -v > .nvmrc
-```
+[How to set up a new Next.js project](https://nextjs.org/docs/app/getting-started/installation)
 
-## Tailwindcss
-
-Install Tailwind CSS with Next.js
-
-```shell
-npm install -D tailwindcss@3 postcss autoprefixer
-```
-
-Beautiful typographic defaults for HTML you don't control.
-
-```shell
-npm install -D @tailwindcss/typography
-```
-
-## Shadcn
+## shadcn
 
 Run the init command to create a new Next.js project or to setup an existing one:
 
@@ -80,25 +78,7 @@ export default function RootLayout({
 }
 ```
 
-## AI SDK
-
-Official JavaScript / TypeScript library for the OpenAI API
-
-```shell
-npm install openai
-```
-
-The AI SDK is the TypeScript toolkit designed to help developers build AI-powered applications and agents with React, Next.js, Vue, Svelte, Node.js, and more.
-
-```shell
-npm install ai @ai-sdk/openai zod
-```
-
-The Groq provider for the AI SDK contains language model support for the Groq chat and completion APIs and embedding model support for the Groq embeddings API.
-
-```shell
-npm install @ai-sdk/groq
-```
+[Install and configure Next.js](https://ui.shadcn.com/docs/installation/next)
 
 ## assistant-ui
 
@@ -117,6 +97,47 @@ Integration with the Vercel AI SDK UI's useAssistant hook.
 
 ```shell
 npm install @assistant-ui/react @assistant-ui/react-ai-sdk ai openai
+```
+
+## Tailwindcss
+
+Install Tailwind CSS
+
+```shell
+npm install -D tailwindcss@3 postcss autoprefixer
+```
+
+Add Tailwind to your PostCSS configuration. `postcss.config.js`:
+
+```javascript
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  }
+}
+```
+
+[Get started with Tailwind CSS](https://tailwindcss.com/docs/installation/using-postcss)
+
+## AI SDK
+
+Official JavaScript / TypeScript library for the OpenAI API
+
+```shell
+npm install openai
+```
+
+The AI SDK is the TypeScript toolkit designed to help developers build AI-powered applications and agents with React, Next.js, Vue, Svelte, Node.js, and more.
+
+```shell
+npm install ai @ai-sdk/openai zod
+```
+
+The Groq provider for the AI SDK contains language model support for the Groq chat and completion APIs and embedding model support for the Groq embeddings API.
+
+```shell
+npm install @ai-sdk/groq
 ```
 
 ## ESLint
