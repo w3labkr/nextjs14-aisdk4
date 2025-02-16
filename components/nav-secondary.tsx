@@ -23,7 +23,7 @@ export function NavSecondary({ items }: { items: NavItem[] }) {
         <SidebarMenu>
           {items.map((item) => (
             <SidebarMenuItem key={item.title}>
-              <SidebarMenuButton asChild isActive={item.isActive}>
+              <SidebarMenuButton asChild isActive={false}>
                 <Link href={item.url}>
                   <LucideIcon name={item.iconName} />
                   <span>{item.title}</span>
