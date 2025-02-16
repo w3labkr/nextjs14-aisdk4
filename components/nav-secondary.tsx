@@ -3,7 +3,6 @@
 import * as React from 'react'
 import Link from 'next/link'
 
-import { type LucideIcon } from 'lucide-react'
 import {
   SidebarGroup,
   SidebarGroupContent,
@@ -12,17 +11,11 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from '@/components/custom-ui/sidebar'
+import { LucideIcon } from '@/components/lucide-icon'
 
-export function NavSecondary({
-  items,
-}: {
-  items: {
-    title: string
-    url: string
-    icon: LucideIcon
-    isActive?: boolean
-  }[]
-}) {
+import { type NavItem } from '@/config/dashboard'
+
+export function NavSecondary({ items }: { items: NavItem[] }) {
   return (
     <SidebarGroup className="p-0">
       <SidebarGroupLabel>Assistant UI</SidebarGroupLabel>
@@ -32,7 +25,7 @@ export function NavSecondary({
             <SidebarMenuItem key={item.title}>
               <SidebarMenuButton asChild isActive={item.isActive}>
                 <Link href={item.url}>
-                  <item.icon />
+                  <LucideIcon name={item.iconName} />
                   <span>{item.title}</span>
                 </Link>
               </SidebarMenuButton>
