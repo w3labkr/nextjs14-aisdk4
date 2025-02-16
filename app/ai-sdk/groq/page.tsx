@@ -29,7 +29,7 @@ import { Chat } from '@/components/chat'
 
 import dashboard from '@/config/dashboard'
 
-export default function ChatPage() {
+export default function GroqPage() {
   return (
     <SidebarProvider>
       <Sidebar>
@@ -58,7 +58,7 @@ export default function ChatPage() {
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbPage>Chat</BreadcrumbPage>
+                  <BreadcrumbPage>Groq</BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
@@ -68,7 +68,7 @@ export default function ChatPage() {
           </div>
         </header>
         <div className="h-full w-full p-10">
-          <Chat api="/api/ai-sdk/chat" />
+          <Chat api="/api/ai-sdk/groq" />
         </div>
       </SidebarInset>
     </SidebarProvider>

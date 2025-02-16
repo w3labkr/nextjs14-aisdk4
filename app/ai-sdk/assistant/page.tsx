@@ -25,6 +25,7 @@ import { NavMain } from '@/components/nav-main'
 import { NavSecondary } from '@/components/nav-secondary'
 import { NavPlan } from '@/components/nav-plan'
 import { NavChatHistory } from '@/components/nav-chat-history'
+import { Assistant } from '@/components/assistant'
 
 import dashboard from '@/config/dashboard'
 
@@ -66,7 +67,9 @@ export default function AssistantPage() {
             <NavUser />
           </div>
         </header>
-        <div className="h-full w-full p-10">...</div>
+        <div className="h-full w-full p-10">
+          <Assistant api="/api/ai-sdk/assistant" />
+        </div>
       </SidebarInset>
     </SidebarProvider>
   )
