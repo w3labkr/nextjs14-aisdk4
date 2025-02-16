@@ -82,15 +82,22 @@ export default function RootLayout({
 
 ## assistant-ui
 
+Install provider SDK:
+
+```shell
+npm install ai @assistant-ui/react-ai-sdk @ai-sdk/openai
+```
+
 Typescript/React library for AI Chat
 
 ```shell
-npx shadcn@latest add "https://r.assistant-ui.com/thread"
-npx shadcn@latest add "https://r.assistant-ui.com/thread-list"
-npx shadcn@latest add "https://r.assistant-ui.com/attachment"
-npx shadcn@latest add "https://r.assistant-ui.com/assistant-modal"
-npx shadcn@latest add "https://r.assistant-ui.com/assistant-sidebar"
-npx shadcn@latest add "https://r.assistant-ui.com/markdown-text"
+npx shadcn@latest add -o "https://r.assistant-ui.com/thread" "https://r.assistant-ui.com/thread-list" "https://r.assistant-ui.com/attachment" "https://r.assistant-ui.com/assistant-modal" "https://r.assistant-ui.com/assistant-sidebar" "https://r.assistant-ui.com/markdown-text"
+```
+
+Integration with the Vercel AI SDK UI's useChat hook.
+
+```shell
+npm install @assistant-ui/react @assistant-ui/react-ai-sdk ai @ai-sdk/openai
 ```
 
 Integration with the Vercel AI SDK UI's useAssistant hook.

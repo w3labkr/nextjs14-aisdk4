@@ -1,6 +1,8 @@
 'use client'
 
-import { useChat } from 'ai/react'
+import * as React from 'react'
+
+import { useChat } from '@ai-sdk/react'
 import { AssistantRuntimeProvider } from '@assistant-ui/react'
 import { useVercelUseChatRuntime } from '@assistant-ui/react-ai-sdk'
 

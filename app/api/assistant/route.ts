@@ -2,11 +2,11 @@ import { AssistantResponse } from 'ai'
 import OpenAI from 'openai'
 import type { Run } from 'openai/resources/beta/threads/runs/runs'
 
-const openai = new OpenAI()
-
 const SYSTEM_INSTRUCTIONS = `You are a helpful assistant. Check your knowledge base before answering any questions.
 Only respond to questions using information from tool calls.
 if no relevant information is found in the tool calls, respond, "Sorry, I don't know."`
+
+const openai = new OpenAI()
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30

@@ -1,12 +1,12 @@
 import { convertToCoreMessages, streamText, type Message } from 'ai'
 import { createOpenAI as createGroq } from '@ai-sdk/openai'
 
+const SYSTEM_INSTRUCTIONS = `You are a helpful assistant.`
+
 const groq = createGroq({
   baseURL: 'https://api.groq.com/openai/v1',
   apiKey: process.env.GROQ_API_KEY,
 })
-
-const SYSTEM_INSTRUCTIONS = `You are a helpful assistant.`
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30

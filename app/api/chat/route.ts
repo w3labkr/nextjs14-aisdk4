@@ -1,5 +1,5 @@
 import { openai } from '@ai-sdk/openai'
-import { convertToCoreMessages, streamText, type Message } from 'ai'
+import { streamText, convertToCoreMessages, type Message } from 'ai'
 
 const SYSTEM_INSTRUCTIONS = `You are a helpful assistant.`
 
