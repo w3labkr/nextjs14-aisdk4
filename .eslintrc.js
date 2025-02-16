@@ -23,7 +23,6 @@ module.exports = {
     '/dist/',
     '/out/',
     '/components/ui/',
-    '/components/custom-ui/',
     '/components/assistant-ui/',
     '.eslintrc.js',
     '*.config.mjs',

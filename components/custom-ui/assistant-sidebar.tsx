@@ -17,17 +17,19 @@ import { NavLogo } from '@/components/nav-logo'
 import { NavMain } from '@/components/nav-main'
 import { NavSecondary } from '@/components/nav-secondary'
 import { NavPlan } from '@/components/nav-plan'
-import { NavChatHistory } from '@/components/nav-chat-history'
+import { NewChat } from '@/components/custom-ui/new-chat'
+import { NavChatHistory } from '@/components/custom-ui/nav-chat-history'
+import { Thread } from '@/components/assistant-ui/thread'
 
 import dashboard from '@/config/dashboard'
 
-export function AppSidebar({ children }: { children?: React.ReactNode }) {
+export function AssistantSidebar({ children }: { children?: React.ReactNode }) {
   return (
     <SidebarProvider>
       <Sidebar>
         <SidebarHeader className="flex h-16 flex-row items-center justify-between px-2 py-0">
           <NavLogo />
-          {/* <NewChat /> */}
+          <NewChat />
         </SidebarHeader>
         <SidebarContent className="space-y-4 px-2">
           <NavMain items={dashboard.navMain} />
@@ -49,7 +51,9 @@ export function AppSidebar({ children }: { children?: React.ReactNode }) {
             <NavUser />
           </div>
         </header>
-        <div className="h-full w-full p-10">...</div>
+        <div className="h-full w-full p-10">
+          <Thread />
+        </div>
       </SidebarInset>
     </SidebarProvider>
   )

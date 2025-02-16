@@ -13,7 +13,7 @@ import {
   SidebarMenuItem,
 } from '@/components/custom-ui/sidebar'
 
-export function NavMain({
+export function NavSecondary({
   items,
 }: {
   items: {
@@ -25,7 +25,7 @@ export function NavMain({
 }) {
   return (
     <SidebarGroup className="p-0">
-      <SidebarGroupLabel>AI SDK by Vercel</SidebarGroupLabel>
+      <SidebarGroupLabel>Assistant UI</SidebarGroupLabel>
       <SidebarGroupContent>
         <SidebarMenu>
           {items.map((item) => (

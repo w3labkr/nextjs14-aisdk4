@@ -4,7 +4,7 @@ import './globals.css'
 
 import { Toaster } from '@/components/ui/sonner'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
-import { ChatbotModal } from '@/components/chatbot-modal'
+import { ChatbotModal } from '@/components/custom-ui/chatbot-modal'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
