@@ -6,7 +6,8 @@ declare global {
       NEXT_PUBLIC_APP_URL: string
 
       OPENAI_API_KEY: string
-      ASSISTANT_ID: string
+      OPENAI_ASSISTANT_ID: string
+      ANTHROPIC_API_KEY: string
       AZURE_RESOURCE_NAME: string
       AZURE_API_KEY: string
       AWS_ACCESS_KEY_ID: string
@@ -16,7 +17,6 @@ declare global {
       GOOGLE_VERTEX_PROJECT: string
       GOOGLE_VERTEX_LOCATION: string
       GOOGLE_APPLICATION_CREDENTIALS: string
-      ANTHROPIC_API_KEY: string
       GROQ_API_KEY: string
       FIREWORKS_API_KEY: string
       COHERE_API_KEY: string
