@@ -24,8 +24,9 @@ module.exports = {
     '/out/',
     '/components/ui/',
     '/components/custom-ui/',
-    '/components/chatbot-kit/',
-    '/*.config.*',
+    '/components/assistant-ui/',
+    '.eslintrc.js',
+    '*.config.mjs',
   ],
   settings: {
     'import/parsers': {

@@ -162,7 +162,7 @@ Find and fix problems in your JavaScript code.
 
 ```shell
 npx eslint ./app
-npx eslint --fix ./{app,components,config,context,hooks,lib,queries,store,types}
+npx eslint --fix ./{app,components,config,context,hooks,lib,schemas,store,types,utils}
 ```
 
 ## Prettier
@@ -172,11 +172,12 @@ Prettier is an opinionated code formatter.
 ```shell
 npm install --save-dev prettier eslint-plugin-prettier eslint-config-prettier
 npm install --save-dev eslint-plugin-tailwindcss prettier-plugin-tailwindcss
+npm install --save-dev prettier-plugin-prisma
 ```
 
 To format a file in-place.
 
 ```shell
 npx prettier --check "./app/**/*.{ts,tsx}"
-npx prettier --write "./{app,components,config,context,hooks,lib,queries,store,types}/**/*.{ts,tsx}"
+npx prettier --write "./{app,components,config,context,hooks,lib,schemas,store,types,utils}/**/*.{ts,tsx}"
 ```
